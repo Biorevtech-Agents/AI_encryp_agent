@@ -2,6 +2,14 @@
 
 An autonomous AI agent for cryptocurrency trading that combines technical analysis with sentiment analysis and employs self-reflection for continuous improvement.
 
+## System Requirements
+
+- **Python**: Version 3.8 (required)
+  - The project is specifically built and tested with Python 3.8
+  - Other versions are not officially supported
+- Docker and Docker Compose (for containerized deployment)
+- Linux/Unix environment recommended
+
 ## Features
 
 - Autonomous trading with multiple strategies
@@ -14,31 +22,38 @@ An autonomous AI agent for cryptocurrency trading that combines technical analys
 
 ## Prerequisites
 
-- Python 3.8 or higher
+Before you begin, ensure you have:
+- Python 3.8 installed (higher versions are not officially supported)
 - Docker and Docker Compose (for containerized deployment)
 - Binance API credentials
 - News API key
 
 ## Installation
 
-1. Clone the repository:
+1. Ensure you have Python 3.8:
 ```bash
-git clone https://github.com/yourusername/AI_encryp_agent.git
+python --version  # Should output Python 3.8.x
+```
+
+2. Clone the repository:
+```bash
+git clone https://github.com/Biorevtech-Agents/AI_encryp_agent.git
 cd AI_encryp_agent
 ```
 
-2. Create and activate a virtual environment:
+3. Create and activate a virtual environment with Python 3.8:
 ```bash
-python -m venv venv
+python3.8 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-3. Install dependencies:
+4. Install dependencies:
 ```bash
+pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-4. Copy the example environment file and update with your credentials:
+5. Copy the example environment file and update with your credentials:
 ```bash
 cp .env.example .env
 # Edit .env with your API keys and configuration
