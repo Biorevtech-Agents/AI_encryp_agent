@@ -1,0 +1,20 @@
+# These owners will be the default owners for everything in the repo
+* @Biorevtech-Agents/admin
+
+# Python source code
+/src/ @Biorevtech-Agents/developers
+
+# Tests
+/tests/ @Biorevtech-Agents/qa
+
+# Infrastructure files
+/monitoring/ @Biorevtech-Agents/devops
+Dockerfile @Biorevtech-Agents/devops
+docker-compose.yml @Biorevtech-Agents/devops
+
+# Dependencies
+requirements.txt @Biorevtech-Agents/developers
+setup.py @Biorevtech-Agents/developers
+
+# Documentation
+*.md @Biorevtech-Agents/docs 
