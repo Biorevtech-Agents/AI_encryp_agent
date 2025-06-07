@@ -1,0 +1,84 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+trading_*.log
+agent_state.json
+
+# Model files
+models/*.bin
+models/*.pt
+models/*.pth
+models/*.h5
+
+# Test coverage
+.coverage
+htmlcov/
+
+# Distribution
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# mypy
+.mypy_cache/
+
+# pytest
+.pytest_cache/
+
+# Cache
+.cache/
+
+# Data files
+*.csv
+*.json
+!config/*.json  # Keep config JSON files
+
+# TA-Lib source files (since we install via pip)
+external/ta-lib/
+
+# Monitoring data
+monitoring/grafana/data/
+monitoring/prometheus/data/ 

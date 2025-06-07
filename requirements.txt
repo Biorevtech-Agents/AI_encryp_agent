@@ -1,0 +1,32 @@
+# Core dependencies
+numpy>=1.21.0
+pandas>=1.3.0
+python-binance>=1.0.16
+python-dotenv>=0.19.0
+
+# Technical Analysis
+ta-lib>=0.4.24
+pandas-ta>=0.3.14b
+
+# Machine Learning & Sentiment Analysis
+transformers>=4.18.0
+torch>=1.10.0
+nltk>=3.6.5
+textblob>=0.15.3
+newsapi-python>=0.2.6
+
+# Data Processing & Visualization
+matplotlib>=3.4.3
+seaborn>=0.11.2
+
+# Utilities
+requests>=2.26.0
+python-dateutil>=2.8.2
+pytz>=2021.3
+tqdm>=4.62.3
+
+# Development & Testing
+pytest>=6.2.5
+black>=21.9b0
+flake8>=3.9.2
+mypy>=0.910 
