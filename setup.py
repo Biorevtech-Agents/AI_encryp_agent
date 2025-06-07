@@ -1,4 +1,10 @@
+"""Setup configuration for AI Encryption Agent."""
+
 from setuptools import setup, find_packages
+
+# Read version from version.py
+with open('src/utils/version.py', 'r') as f:
+    exec(f.read())
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
@@ -8,7 +14,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(
     name="ai_encryp_agent",
-    version="0.1.0",
+    version=__version__,
     author="Biorevtech-Agents",
     author_email="media@biorev.us",
     description="An autonomous AI agent for cryptocurrency trading",
@@ -27,7 +33,22 @@ setup(
         "Topic :: Office/Business :: Financial :: Investment",
     ],
     python_requires="==3.8.*",
-    install_requires=requirements,
+    install_requires=[
+        "numpy>=1.24.0,<1.25.0",
+        "pandas>=2.0.0,<2.1.0",
+        "torch>=2.0.0,<3.0.0",
+        "ta-lib>=0.4.0",
+        "packaging>=23.0",  # For version parsing
+    ],
+    extras_require={
+        "dev": [
+            "pytest>=7.0.0",
+            "pytest-cov>=4.0.0",
+            "black>=23.0.0",
+            "flake8>=6.0.0",
+            "mypy>=1.0.0",
+        ],
+    },
     entry_points={
         "console_scripts": [
             "ai_encryp_agent=src.main:main",
