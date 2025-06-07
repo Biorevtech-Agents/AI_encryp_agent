@@ -24,9 +24,15 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Environment (please complete the following information):**
- - OS: [e.g. Ubuntu 20.04]
- - Python Version: [e.g. 3.8]
- - Package Versions: [e.g. ta-lib 0.6.3]
+- OS: [e.g. Ubuntu 20.04]
+- Python Version: [e.g. 3.8.10]
+- Package Version: [e.g. 0.1.0]
+- Dependencies Versions:
+  ```
+  numpy==1.24.2
+  pandas==2.0.1
+  ...
+  ```
 
 **Additional context**
 Add any other context about the problem here. 

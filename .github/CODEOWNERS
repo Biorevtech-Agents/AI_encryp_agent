@@ -1,20 +1,26 @@
-# These owners will be the default owners for everything in the repo
-* @Biorevtech-Agents/admin
+# Global code owners
+* @biorev3pp
 
-# Python source code
-/src/ @Biorevtech-Agents/developers
+# Core application code
+/src/ @biorev3pp
 
 # Tests
-/tests/ @Biorevtech-Agents/qa
+/tests/ @biorev3pp
 
-# Infrastructure files
-/monitoring/ @Biorevtech-Agents/devops
-Dockerfile @Biorevtech-Agents/devops
-docker-compose.yml @Biorevtech-Agents/devops
-
-# Dependencies
-requirements.txt @Biorevtech-Agents/developers
-setup.py @Biorevtech-Agents/developers
+# Configuration files
+*.yml @biorev3pp
+*.yaml @biorev3pp
+setup.py @biorev3pp
+requirements.txt @biorev3pp
 
 # Documentation
-*.md @Biorevtech-Agents/docs 
+/docs/ @biorev3pp
+*.md @biorev3pp
+
+# CI/CD and GitHub Actions
+/.github/ @biorev3pp
+
+# Security and dependency configurations
+/security/ @biorev3pp
+Dockerfile @biorev3pp
+docker-compose.yml @biorev3pp 
