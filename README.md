@@ -1,6 +1,8 @@
-# AI Cryptocurrency Trading Agent
+# AI Encryption Agent
 
-An autonomous AI agent for cryptocurrency trading that combines technical analysis with sentiment analysis and employs self-reflection for continuous improvement.
+[![Build Status](https://github.com/Biorevtech-Agents/AI_encryp_agent/workflows/CI%2FCD/badge.svg)](https://github.com/Biorevtech-Agents/AI_encryp_agent/actions)
+
+An AI-powered cryptocurrency trading agent with encryption capabilities.
 
 ## System Requirements
 
