@@ -3,7 +3,7 @@ version: '3.8'
 services:
   trading_agent:
     build: .
-    container_name: ai_encryp_agent
+    container_name: crypto_trading_agent
     env_file: .env
     volumes:
       - ./data:/app/data
@@ -23,7 +23,7 @@ services:
 
   monitoring:
     image: grafana/grafana:latest
-    container_name: trading_monitor
+    container_name: crypto_trading_monitor
     ports:
       - "3000:3000"
     volumes:
@@ -35,7 +35,7 @@ services:
 
   prometheus:
     image: prom/prometheus:latest
-    container_name: trading_metrics
+    container_name: crypto_trading_metrics
     volumes:
       - ./monitoring/prometheus:/etc/prometheus
       - prometheus_data:/prometheus

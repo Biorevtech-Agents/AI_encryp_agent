@@ -1,5 +1,5 @@
-# Use Python 3.8 slim image as base
-FROM python:3.8-slim
+# Use Python 3.12 slim image as base
+FROM python:3.12-slim
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1 \
@@ -15,11 +15,23 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     curl \
+    wget \
     && rm -rf /var/lib/apt/lists/*
+
+# Install TA-Lib
+RUN wget https://github.com/TA-Lib/ta-lib/releases/download/v0.6.4/ta-lib-0.6.4.tar.gz && \
+    tar -xzf ta-lib-0.6.4.tar.gz && \
+    cd ta-lib/ && \
+    ./configure --prefix=/usr && \
+    make && \
+    make install && \
+    cd .. && \
+    rm -rf ta-lib-0.6.4.tar.gz ta-lib/
 
 # Install Python dependencies
 COPY requirements.txt .
 RUN pip install --upgrade pip && \
+    pip install numpy && \
     pip install --no-cache-dir -r requirements.txt
 
 # Copy project files

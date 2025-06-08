@@ -13,10 +13,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: Set up Python 3.8
+    - name: Set up Python 3.12
       uses: actions/setup-python@v4
       with:
-        python-version: "3.8"
+        python-version: "3.12"
     
     - name: Install system dependencies
       run: |
@@ -25,8 +25,8 @@ jobs:
         
     - name: Install TA-Lib
       run: |
-        wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
-        tar -xzf ta-lib-0.4.0-src.tar.gz
+        wget https://github.com/TA-Lib/ta-lib/releases/download/v0.6.4/ta-lib-0.6.4.tar.gz
+        tar -xzf ta-lib-0.6.4.tar.gz
         cd ta-lib/
         ./configure --prefix=/usr
         make
@@ -36,6 +36,7 @@ jobs:
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
+        pip install numpy  # Install numpy first to avoid TA-Lib build issues
         pip install -r requirements.txt
         pip install pytest pytest-cov black flake8 mypy
     
@@ -62,10 +63,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: Set up Python 3.8
+    - name: Set up Python 3.12
       uses: actions/setup-python@v4
       with:
-        python-version: "3.8"
+        python-version: "3.12"
     
     - name: Install system dependencies
       run: |
@@ -74,8 +75,8 @@ jobs:
         
     - name: Install TA-Lib
       run: |
-        wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
-        tar -xzf ta-lib-0.4.0-src.tar.gz
+        wget https://github.com/TA-Lib/ta-lib/releases/download/v0.6.4/ta-lib-0.6.4.tar.gz
+        tar -xzf ta-lib-0.6.4.tar.gz
         cd ta-lib/
         ./configure --prefix=/usr
         make
@@ -85,6 +86,7 @@ jobs:
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
+        pip install numpy  # Install numpy first to avoid TA-Lib build issues
         pip install -r requirements.txt
         pip install pytest pytest-cov
     
@@ -104,10 +106,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: Set up Python 3.8
+    - name: Set up Python 3.12
       uses: actions/setup-python@v4
       with:
-        python-version: "3.8"
+        python-version: "3.12"
     
     - name: Install system dependencies
       run: |
@@ -116,8 +118,8 @@ jobs:
         
     - name: Install TA-Lib
       run: |
-        wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
-        tar -xzf ta-lib-0.4.0-src.tar.gz
+        wget https://github.com/TA-Lib/ta-lib/releases/download/v0.6.4/ta-lib-0.6.4.tar.gz
+        tar -xzf ta-lib-0.6.4.tar.gz
         cd ta-lib/
         ./configure --prefix=/usr
         make
@@ -127,6 +129,7 @@ jobs:
     - name: Install build dependencies
       run: |
         python -m pip install --upgrade pip
+        pip install numpy  # Install numpy first to avoid TA-Lib build issues
         pip install build twine
     
     - name: Build package

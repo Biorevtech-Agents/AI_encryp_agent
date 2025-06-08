@@ -1,4 +1,4 @@
-"""Setup configuration for AI Encryption Agent."""
+"""Setup configuration for Crypto Trading Agent."""
 
 from setuptools import setup, find_packages
 
@@ -13,14 +13,14 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
     requirements = [line.strip() for line in fh if line.strip() and not line.startswith("#")]
 
 setup(
-    name="ai_encryp_agent",
+    name="crypto_trading_agent",
     version=__version__,
     author="Biorevtech-Agents",
     author_email="media@biorev.us",
     description="An autonomous AI agent for cryptocurrency trading",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/Biorevtech-Agents/AI_encryp_agent",
+    url="https://github.com/Biorevtech-Agents/crypto_trading_agent",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 3 - Alpha",
@@ -28,11 +28,11 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.12",
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: Office/Business :: Financial :: Investment",
     ],
-    python_requires="==3.8.*",
+    python_requires=">=3.12,<3.13",
     install_requires=[
         "numpy>=1.24.0,<1.25.0",
         "pandas>=2.0.0,<2.1.0",
@@ -51,7 +51,7 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "ai_encryp_agent=src.main:main",
+            "crypto_trading_agent=src.main:main",
         ],
     },
 ) 
