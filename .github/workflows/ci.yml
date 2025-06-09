@@ -94,9 +94,9 @@ jobs:
       run: |
         pytest tests/integration
       env:
-        BINANCE_API_KEY: ${{ secrets.BINANCE_API_KEY }}
-        BINANCE_API_SECRET: ${{ secrets.BINANCE_API_SECRET }}
-        NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
+        BINANCE_API_KEY: Vz5j8IJK0pS9GK00IyzkdGlIWoXCKVJlDSefSEmkCaMv5CfRTeQ0wgmfgwtPKqlT
+        BINANCE_API_SECRET: U3jBQ42dlDcBRDeaz4dKmq9iY3jAruSv4keG3juIqzWhL9hDUOeSJAcQh9z60WPF
+        NEWS_API_KEY: 1234567890
 
   build:
     needs: [test, integration-test]
