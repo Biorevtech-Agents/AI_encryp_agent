@@ -74,8 +74,12 @@ build/
 # Data files
 data/raw/*.csv
 data/raw/*.json
+!data/raw/market_data_sample.json
 data/processed/*.csv
 data/processed/*.json
+!data/processed/technical_indicators_sample.json
+data/models/*.json
+!data/models/model_config_sample.json
 !data/raw/README.md
 !data/processed/README.md
 !data/models/README.md
