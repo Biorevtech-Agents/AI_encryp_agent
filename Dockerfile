@@ -13,6 +13,10 @@ WORKDIR /app
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    software-properties-common \
+    && add-apt-repository -y ppa:alex-p/talib \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends \
     build-essential \
     curl \
     wget \
