@@ -1,16 +1,19 @@
-# Crypto Trading Agent
+# Encryption
 
-[![Build Status](https://github.com/Biorevtech-Agents/crypto_trading_agent/workflows/CI%2FCD/badge.svg)](https://github.com/Biorevtech-Agents/crypto_trading_agent/actions)
+[![Build Status](https://github.com/Biorevtech-Agents/Encryption/workflows/CI%2FCD/badge.svg)](https://github.com/Biorevtech-Agents/Encryption/actions)
 
-An AI-powered cryptocurrency trading agent that uses advanced machine learning for automated trading.
+An autonomous cryptocurrency trading agent that uses AI for market analysis and trading decisions.
 
 ## System Requirements
 
-- **Python**: Version 3.12 (required)
-  - The project is specifically built and tested with Python 3.12
+- **Python**: Version 3.8 (required)
+  - The project is specifically built and tested with Python 3.8
   - Other versions are not officially supported
 - Docker and Docker Compose (for containerized deployment)
 - Linux/Unix environment recommended
+- TA-Lib for technical analysis
+- Binance API credentials
+- News API key for sentiment analysis
 
 ## Features
 
@@ -25,37 +28,49 @@ An AI-powered cryptocurrency trading agent that uses advanced machine learning f
 ## Prerequisites
 
 Before you begin, ensure you have:
-- Python 3.12 installed (higher versions are not officially supported)
+- Python 3.8 installed (higher versions are not officially supported)
 - Docker and Docker Compose (for containerized deployment)
 - Binance API credentials
 - News API key
 
 ## Installation
 
-1. Ensure you have Python 3.12:
+1. Ensure you have Python 3.8:
 ```bash
-python --version  # Should output Python 3.12.x
+python --version  # Should output Python 3.8.x
 ```
 
-2. Clone the repository:
+2. Install TA-Lib:
 ```bash
-git clone https://github.com/Biorevtech-Agents/crypto_trading_agent.git
-cd crypto_trading_agent
+# Ubuntu/Debian
+sudo apt-get install ta-lib
+
+# macOS
+brew install ta-lib
+
+# Windows
+# Download and install from: https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib
 ```
 
-3. Create and activate a virtual environment with Python 3.12:
+3. Clone the repository:
 ```bash
-python3.12 -m venv venv
+git clone https://github.com/Biorevtech-Agents/Encryption.git
+cd Encryption
+```
+
+4. Create and activate a virtual environment with Python 3.8:
+```bash
+python3.8 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-4. Install dependencies:
+5. Install dependencies:
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-5. Copy the example environment file and update with your credentials:
+6. Copy the example environment file and update with your credentials:
 ```bash
 cp .env.example .env
 # Edit .env with your API keys and configuration
