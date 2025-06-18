@@ -21,17 +21,10 @@ jobs:
     - name: Install system dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y build-essential wget
-        
-    - name: Install TA-Lib
-      run: |
-        wget https://github.com/TA-Lib/ta-lib/releases/download/v0.4.0/ta-lib-0.4.0-src.tar.gz
-        tar -xzf ta-lib-0.4.0-src.tar.gz
-        cd ta-lib-0.4.0
-        ./configure --prefix=/usr
-        make
-        sudo make install
-        cd ..
+        sudo apt-get install -y software-properties-common
+        sudo add-apt-repository -y ppa:alex-p/talib
+        sudo apt-get update
+        sudo apt-get install -y build-essential wget ta-lib
     
     - name: Install Python dependencies
       run: |
@@ -71,17 +64,10 @@ jobs:
     - name: Install system dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y build-essential wget
-        
-    - name: Install TA-Lib
-      run: |
-        wget https://github.com/TA-Lib/ta-lib/releases/download/v0.4.0/ta-lib-0.4.0-src.tar.gz
-        tar -xzf ta-lib-0.4.0-src.tar.gz
-        cd ta-lib-0.4.0
-        ./configure --prefix=/usr
-        make
-        sudo make install
-        cd ..
+        sudo apt-get install -y software-properties-common
+        sudo add-apt-repository -y ppa:alex-p/talib
+        sudo apt-get update
+        sudo apt-get install -y build-essential wget ta-lib
     
     - name: Install Python dependencies
       run: |
@@ -114,17 +100,10 @@ jobs:
     - name: Install system dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y build-essential wget
-        
-    - name: Install TA-Lib
-      run: |
-        wget https://github.com/TA-Lib/ta-lib/releases/download/v0.4.0/ta-lib-0.4.0-src.tar.gz
-        tar -xzf ta-lib-0.4.0-src.tar.gz
-        cd ta-lib-0.4.0
-        ./configure --prefix=/usr
-        make
-        sudo make install
-        cd ..
+        sudo apt-get install -y software-properties-common
+        sudo add-apt-repository -y ppa:alex-p/talib
+        sudo apt-get update
+        sudo apt-get install -y build-essential wget ta-lib
     
     - name: Install build dependencies
       run: |
