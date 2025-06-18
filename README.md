@@ -1,8 +1,8 @@
-# AI Encryption Agent
+# Encryption
 
-[![Build Status](https://github.com/Biorevtech-Agents/AI_encryp_agent/workflows/CI%2FCD/badge.svg)](https://github.com/Biorevtech-Agents/AI_encryp_agent/actions)
+[![Build Status](https://github.com/Biorevtech-Agents/Encryption/workflows/CI%2FCD/badge.svg)](https://github.com/Biorevtech-Agents/Encryption/actions)
 
-An AI-powered cryptocurrency trading agent with encryption capabilities.
+An autonomous cryptocurrency trading agent that uses AI for market analysis and trading decisions.
 
 ## System Requirements
 
@@ -11,6 +11,9 @@ An AI-powered cryptocurrency trading agent with encryption capabilities.
   - Other versions are not officially supported
 - Docker and Docker Compose (for containerized deployment)
 - Linux/Unix environment recommended
+- TA-Lib for technical analysis
+- Binance API credentials
+- News API key for sentiment analysis
 
 ## Features
 
@@ -37,25 +40,37 @@ Before you begin, ensure you have:
 python --version  # Should output Python 3.8.x
 ```
 
-2. Clone the repository:
+2. Install TA-Lib:
 ```bash
-git clone https://github.com/Biorevtech-Agents/AI_encryp_agent.git
-cd AI_encryp_agent
+# Ubuntu/Debian
+sudo apt-get install ta-lib
+
+# macOS
+brew install ta-lib
+
+# Windows
+# Download and install from: https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib
 ```
 
-3. Create and activate a virtual environment with Python 3.8:
+3. Clone the repository:
+```bash
+git clone https://github.com/Biorevtech-Agents/Encryption.git
+cd Encryption
+```
+
+4. Create and activate a virtual environment with Python 3.8:
 ```bash
 python3.8 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-4. Install dependencies:
+5. Install dependencies:
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-5. Copy the example environment file and update with your credentials:
+6. Copy the example environment file and update with your credentials:
 ```bash
 cp .env.example .env
 # Edit .env with your API keys and configuration
@@ -148,7 +163,7 @@ The agent can be configured through environment variables or a configuration fil
 ## Project Structure
 
 ```
-AI_encryp_agent/
+crypto_trading_agent/
 ├── src/
 │   ├── agent/          # Trading agent implementation
 │   ├── config/         # Configuration management
