@@ -72,9 +72,13 @@ build/
 .cache/
 
 # Data files
-*.csv
-*.json
-!config/*.json  # Keep config JSON files
+data/raw/*.csv
+data/raw/*.json
+data/processed/*.csv
+data/processed/*.json
+!data/raw/README.md
+!data/processed/README.md
+!data/models/README.md
 
 # TA-Lib source files (since we install via pip)
 external/ta-lib/
